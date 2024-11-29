@@ -9,7 +9,7 @@ $config['db_dsnw'] = sprintf(
 );
 
 // 生成随机密钥
-$config['des_key'] = '随机字符串-请更改'; // 建议使用随机生成的字符串
+$config['des_key'] = 'hhjushzs'; // 建议使用随机生成的字符串
 
 // 邮件服务器设置
 $config['default_host'] = 'ssl://your-imap-server';
