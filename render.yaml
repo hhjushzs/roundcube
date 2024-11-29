@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: roundcube
+    env: docker
+    buildCommand: docker build -t roundcube .
+    startCommand: docker run -p $PORT:80 roundcube
+    envVars:
+      - key: ROUNDCUBE_DB_TYPE
+        value: pgsql
+      - key: ROUNDCUBE_DB_HOST
+        value: YOUR_NEON_HOST  # 从 Neon 获取
+      - key: ROUNDCUBE_DB_USER
+        value: YOUR_NEON_USER  # 从 Neon 获取
+      - key: ROUNDCUBE_DB_PASSWORD
+        value: YOUR_NEON_PASSWORD  # 从 Neon 获取
+      - key: ROUNDCUBE_DB_NAME
+        value: neondb
+      - key: ROUNDCUBE_DB_PORT
+        value: 5432
